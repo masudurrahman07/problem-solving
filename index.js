@@ -22,4 +22,12 @@ function findLargest(num1, num2, num3) {
     return Math.max(num1, num2, num3);
 }
 
-console.log(findLargest(10, 5, 8));
+// console.log(findLargest(10, 5, 8));
+
+// Problem 4
+
+function toFahrenheit(celsius) {
+    return (celsius * 9/5) + 32;
+}
+
+// console.log(toFahrenheit(0)); 
