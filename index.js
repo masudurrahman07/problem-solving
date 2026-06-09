@@ -45,3 +45,14 @@ function toFahrenheit(celsius) {
  }
 
 //  console.log(checkSign(-5));
+
+// Problem 6
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+//  console.log(reverseString("Programming"));
+
+// Problem 7
+
