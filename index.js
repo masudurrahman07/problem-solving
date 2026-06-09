@@ -67,3 +67,40 @@ function reverseString(str) {
  }
 
 //  console.log(countVowels("Hello World"));
+
+// Problem 8
+
+function isPalindrome(str) {
+    let reversedStr = str.split('').reverse().join('');
+    
+    if (str === reversedStr) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//  console.log(isPalindrome("madam"));
+
+// Problem 9
+
+function titleCase(str)  {
+    let upperCaseStr = str.split(' ').map( word => word[0].toUpperCase() + word.slice(1)).join(' ');
+    return upperCaseStr;
+}
+
+//  console.log(titleCase("hello world"));
+
+// Problem 10
+
+function countChar(str, char) {
+    let count = 0;
+    for ( let c of str){
+        if ( c === char) {
+            count++;
+        }
+    }
+    return count;   
+}
+
+// console.log(countChar("hello world", "h"));
