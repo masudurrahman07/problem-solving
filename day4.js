@@ -73,5 +73,6 @@ function invertObject(obj) {
  }
 
  
+ 
 const users = [{name: 'Ali'}, {name: 'Sara'}, {name: 'Ali'}];
 // console.log(findDuplicateNames(users)); 
