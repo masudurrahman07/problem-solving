@@ -51,4 +51,10 @@ function fibonacci(n) {
  const c = makeCounter();c.increment(); c.increment();c.getCount();
 //  console.log(c.getCount()); 
 
+// Problem 24: Curry a Function  [Medium]
+
+function curry(fn){
+
+}
+
  
