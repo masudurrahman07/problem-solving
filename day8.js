@@ -24,15 +24,32 @@ const test = safeJsonParse('{"a":1}')
 // await retry(unstableFetch, 3);// Tries up to 3 times before failing
 // Hint: Use a loop with try/catch; only throw after all retries are exhausted.
 
- async  function retry(fn, times){
-    let finalError;
-    for ( let i =0; i< times; i++){
+// YET TO UNDERSTAND LOGIC//
+
+ async function retry(fn, times) {
+    for (let i = 0; i<times; i++){
         try{
-           return await fn()
-        }
-        catch(error){
-          return finalError = error;
+            return await fn();
+        } catch (error) {
+            if  (i === times -1){
+                throw error;
+            }
         }
     }
-    throw finalError;
+ }
+ 
+ let count = 0;
+
+async function unstableFetch() {
+  count++;
+
+  if (count < 3) {
+    throw new Error("Failed!");
+  }
+
+  return "Success!";
 }
+
+retry(unstableFetch, 3)
+  .then(result => console.log(result))
+  .catch(error => console.log(error.message));
