@@ -56,9 +56,12 @@ function findMissing(arr, n) {
   const sum = (n * (n + 1)) / 2;
   let actualSum = 0;
   for (let i = 0; i < arr.length; i++) {
-  
+    // const element = arr[i ];
     actualSum += arr[i];
   }
+  //   for (let number of arr) {
+  //     actualSum += number;
+  //   }
   return sum - actualSum;
 }
-// console.log(findMissing([1, 2, 4, 5], 5));
+console.log(findMissing([1, 2, 4, 5], 5));
