@@ -20,4 +20,25 @@ function twoSum(arr, target){
     }
 }
 
-console.log(twoSum([2, 7, 11, 15], 9))
+// console.log(twoSum([2, 7, 11, 15], 9))
+
+
+ 
+// Problem 42: Check Anagram  [Easy]
+// Description: Write a function isAnagram(str1, str2) that returns true if the two strings are anagrams of each other.
+// Example:
+// Input: 'listen', 'silent'  → Output: true. Input: 'hello', 'world'   → Output: false
+// Hint: Sort both strings and compare, or use a character frequency map.
+
+function isAnagram(str1, str2){
+    if(str1.length !== str2.length){
+        return false
+    }
+
+    const sortedStr1 = str1.split('').sort().join();
+    const sortedStr2 = str2.split('').sort().join();
+
+    return sortedStr1 === sortedStr2
+}
+
+// console.log(isAnagram ('listen', 'silent'))
