@@ -60,4 +60,6 @@ function rotateArray(arr, k) {
   return latOfPart.concat(firstOfPart);
 }
 
+
+
 // console.log(rotateArray([1, 2, 3, 4, 5], 2));
