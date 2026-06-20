@@ -47,4 +47,6 @@ async function getUserData(id) {
      return {id, name: 'Test User'};
 }
 
+
+
 // await getUserData(1).then(data => console.log(data));
